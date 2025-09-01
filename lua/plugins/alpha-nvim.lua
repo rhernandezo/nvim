@@ -21,6 +21,7 @@ return {
         dashboard.button('n', ' ' .. ' New File', ':ene <bar> startinsert <CR>'),
         dashboard.button('m', ' ' .. ' Modified Files', ':lua OpenModifiedFiles()<CR>'),
         dashboard.button('l', ' ' .. ' Open Lazy', ':Lazy <CR>'),
+        dashboard.button('c', ' ' .. ' Config', ':e ~/.config/nvim/<CR>'),
         dashboard.button('q', '󰅙 ' .. ' Quit Neovim', ':qa<CR>'),
       }
 
