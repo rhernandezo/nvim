@@ -11,7 +11,7 @@
 - nvim-treesitter
 - oil.nvim
 - plenary.nvim
-- render-markdown.nvim
+- markdown.nvim
 - smear-cursor.nvim
 - telescope.nvim
 - vim-sleuth
