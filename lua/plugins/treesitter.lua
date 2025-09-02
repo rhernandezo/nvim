@@ -22,7 +22,8 @@ return {
           "vue",
           "php",
           "typescript",
-          "blade"
+          "blade",
+          "yaml",
         },
         sync_install = false,
         highlight = { enable = true },
