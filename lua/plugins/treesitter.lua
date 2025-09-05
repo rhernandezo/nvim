@@ -24,6 +24,13 @@ return {
           "typescript",
           "blade",
           "yaml",
+          "markdown",
+          "markdown_inline",
+          -- "latex",
+          "norg",
+          "svelte",
+          "tsx",
+          "typst"
         },
         sync_install = false,
         highlight = { enable = true },

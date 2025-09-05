@@ -1,20 +1,21 @@
 return {
   {
     'https://github.com/goolord/alpha-nvim.git',
+    enabled = false,
     config = function()
       local alpha = require('alpha')
       local dashboard = require('alpha.themes.dashboard')
 
-      dashboard.section.header.val = {
-        '		                                       ',
-        '		 ██╗    ██╗██╗ ██████╗██╗  ██╗ ██████╗ ',
-        '		 ██║    ██║██║██╔════╝██║  ██║██╔═══██╗',
-        '		 ██║ █╗ ██║██║██║     ███████║██║   ██║',
-        '		 ██║███╗██║██║██║     ██╔══██║██║   ██║',
-        '		 ╚███╔███╔╝██║╚██████╗██║  ██║╚██████╔╝',
-        '		  ╚══╝╚══╝ ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ',
-        '		                                       ',
-      }
+      local logo = [[
+      ██╗    ██╗██╗ ██████╗██╗  ██╗ ██████╗ 
+      ██║    ██║██║██╔════╝██║  ██║██╔═══██╗
+      ██║ █╗ ██║██║██║     ███████║██║   ██║
+      ██║███╗██║██║██║     ██╔══██║██║   ██║
+      ╚███╔███╔╝██║╚██████╗██║  ██║╚██████╔╝
+      ╚══╝╚══╝ ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ 
+      ]]
+
+      dashboard.section.header.val = vim.split(logo, "\n")
 
       dashboard.section.buttons.val = {
         dashboard.button('f', ' ' .. ' Find File', ':Telescope find_files <CR>'),

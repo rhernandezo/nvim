@@ -1,6 +1,8 @@
 return {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' },
+    -- deshabilitaar plugin
+    enabled = false,
     config = function()
         require("telescope").setup({
             -- Pones las opciones globales acá, dentro de "defaults"
