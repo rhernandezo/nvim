@@ -10,11 +10,14 @@ return {
     },
     win = {
       border = "single", -- single, double, shadow
-      -- position = "bottom", -- o "top"
-      -- margin = { 1, 0, 1, 0 },
-      -- padding = { 2, 2, 2, 2 },
-
     },
+    layout = {
+      height = { min = 4, max = 25 }, -- min and max height of the columns
+      width = { min = 3, max = 50 }, -- min and max width of the columns
+      spacing = 3, -- spacing between columns
+      align = "left", -- align columns left, center or right
+    },
+    show_help = true,
   },
 }
 
