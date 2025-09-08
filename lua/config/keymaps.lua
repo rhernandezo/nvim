@@ -29,3 +29,44 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 -- OIL
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
+-- CopilotChat keymaps adicionales
+-- map("n", "<leader>ai", function()
+--   local input = vim.fn.input("AI Quick Question: ")
+--   if input ~= "" then
+--     require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+--   end
+-- end, { desc = "AI Quick Question" })
+--
+-- -- Keymaps para acceso rápido a funciones comunes de AI
+-- map({ "n", "v" }, "<leader>ae", "<cmd>CopilotChatExplain<cr>", { desc = "AI Explain" })
+-- map({ "n", "v" }, "<leader>af", "<cmd>CopilotChatFix<cr>", { desc = "AI Fix" })
+-- map({ "n", "v" }, "<leader>ao", "<cmd>CopilotChatOptimize<cr>", { desc = "AI Optimize" })
+-- map({ "n", "v" }, "<leader>ad", "<cmd>CopilotChatDocs<cr>", { desc = "AI Documentation" })
+-- map({ "n", "v" }, "<leader>at", "<cmd>CopilotChatTests<cr>", { desc = "AI Tests" })
+--
+-- -- Toggle rápido del chat
+-- map("n", "<leader>ac", "<cmd>CopilotChatToggle<cr>", { desc = "AI Chat Toggle" })
+--
+-- -- Chat con selección visual más intuitivo
+-- map("v", "<leader>ac", ":CopilotChatVisual<cr>", { desc = "AI Chat with Selection" })
+--
+-- -- Workflow de desarrollo con AI
+-- map("n", "<leader>aw", function()
+--   local actions = {
+--     "Explain this code",
+--     "Review this code", 
+--     "Fix this code",
+--     "Optimize this code",
+--     "Generate tests",
+--     "Generate documentation",
+--     "Refactor this code",
+--     "Better variable names"
+--   }
+--
+--   vim.ui.select(actions, { prompt = "AI Action:" }, function(choice)
+--     if choice then
+--       vim.cmd("CopilotChat " .. choice)
+--     end
+--   end)
+-- end, { desc = "AI Workflow Menu" })
+
