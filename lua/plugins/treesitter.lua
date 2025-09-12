@@ -22,6 +22,7 @@ return {
           "vue",
           "php",
           "typescript",
+          "json",
           "blade",
           "yaml",
           "markdown",

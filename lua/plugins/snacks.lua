@@ -1,3 +1,17 @@
+-- Function to open all modified files in buffers
+function OpenModifiedFiles()
+  local handle = io.popen('git ls-files -m')
+  if handle then
+    local result = handle:read('*a')
+    handle:close()
+    for file in result:gmatch('[^\r\n]+') do
+      vim.cmd('edit ' .. file)
+    end
+  else
+    print('Git not found or no modified files')
+  end
+end
+
 return {
   -- Plugin: snacks.nvim
   -- URL: https://github.com/folke/snacks.nvim/tree/main
@@ -56,6 +70,7 @@ return {
                 { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
                 { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
                 { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+                { icon = " ", key = "m", desc = "Open Modified Files in Buffers", action = ":lua OpenModifiedFiles()" },
                 { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
                 { icon = " ", key = "s", desc = "Restore Session", section = "session" },
                 { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
