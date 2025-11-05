@@ -22,7 +22,7 @@ return {
     priority = 1000,
     opts = {
       notifier = {},
-      image = {},
+      image = { enabled = false }, -- Deshabilitado por no compatibilidad con zellij
       picker = {
         exclude = {
           ".git",

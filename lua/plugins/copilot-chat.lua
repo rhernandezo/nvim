@@ -24,25 +24,27 @@ return {
       },
     },
 
+    -- List of CopilotChat-related commands to be registered with Neovim.
+    -- These commands provide various chat, code review, and automation features.
     cmd = {
-      "CopilotChat",
-      "CopilotChatOpen",
-      "CopilotChatClose",
-      "CopilotChatToggle",
-      "CopilotChatStop",
-      "CopilotChatReset",
-      "CopilotChatSave",
-      "CopilotChatLoad",
-      "CopilotChatDebugInfo",
-      "CopilotChatExplain",
-      "CopilotChatReview",
-      "CopilotChatFix",
-      "CopilotChatOptimize",
-      "CopilotChatDocs",
-      "CopilotChatTests",
-      "CopilotChatFixDiagnostic",
-      "CopilotChatCommit",
-      "CopilotChatCommitStaged",
+      "CopilotChat",               -- Main chat interface command
+      "CopilotChatOpen",           -- Open chat window
+      "CopilotChatClose",          -- Close chat window
+      "CopilotChatToggle",         -- Toggle chat window visibility
+      "CopilotChatStop",           -- Stop current chat session
+      "CopilotChatReset",          -- Reset chat context
+      "CopilotChatSave",           -- Save chat history or context
+      "CopilotChatLoad",           -- Load saved chat history or context
+      "CopilotChatDebugInfo",      -- Show debug information
+      "CopilotChatExplain",        -- Explain selected code
+      "CopilotChatReview",         -- Review code for issues
+      "CopilotChatFix",            -- Suggest fixes for code
+      "CopilotChatOptimize",       -- Suggest optimizations
+      "CopilotChatDocs",           -- Generate documentation
+      "CopilotChatTests",          -- Generate tests
+      "CopilotChatFixDiagnostic",  -- Fix diagnostics or errors
+      "CopilotChatCommit",         -- Commit changes with message
+      "CopilotChatCommitStaged",   -- Commit staged changes
     },
 
     keys = {
